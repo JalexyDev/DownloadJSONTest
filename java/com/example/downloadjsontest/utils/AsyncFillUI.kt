@@ -27,7 +27,6 @@ class AsyncFillUI(val context: Context) : AsyncTask<Unit, Unit, Unit>() {
 
     override fun onPostExecute(result: Unit?) {
         super.onPostExecute(result)
-
         fillUI()
     }
 

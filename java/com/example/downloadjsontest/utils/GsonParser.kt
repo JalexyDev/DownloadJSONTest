@@ -14,14 +14,10 @@ class GsonParser(var jsonString: String) {
             val obj = JSONObject(jsonString)
             val jsonAr: JSONArray = obj.getJSONArray(arKey)
 
-            println(jsonAr.length())
-            println(jsonAr.toString())
-
             for (i in 0..jsonAr.length()-1) {
                 val user = gson.fromJson<User>(jsonAr[i].toString(), User::class.java)
                 list.add(user)
             }
-            println(list.size)
         }
         return list
     }
